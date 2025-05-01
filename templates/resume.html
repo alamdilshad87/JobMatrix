@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobMatrix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #343a40;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ced4da;
+    }
+
+    .container {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #495057;
+    }
+
+    .cta {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .cta button {
+      padding: 1rem 2rem;
+      background: #007bff;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e9ecef;
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JobMatrix</h1>
+    <p>Smart Resume Matching for Smarter Hiring Decisions</p>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align:center;">Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Upload Resumes</h3>
+        <p>Upload multiple resumes in PDF, DOCX, TXT, or CSV formats effortlessly.</p>
+      </div>
+      <div class="card">
+        <h3>AI Matching</h3>
+        <p>Our TF-IDF engine compares each resume with your job description using AI.</p>
+      </div>
+      <div class="card">
+        <h3>Top 5 Results</h3>
+        <p>Instantly see the top 5 resumes with the highest similarity scores.</p>
+      </div>
+      <div class="card">
+        <h3>Clean Reports</h3>
+        <p>Simple, readable similarity percentages to help you make quick decisions.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <button onclick="window.location.href='/matcher'">Try It Now</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 JobMatrix. All rights reserved.
+  </footer>
+</body>
+</html>
