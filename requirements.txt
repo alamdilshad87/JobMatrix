@@ -1,0 +1,5 @@
+Flask==2.3.3
+docx2txt==0.8
+PyPDF2==3.0.1
+scikit-learn==1.4.1.post1
+Werkzeug==2.3.7

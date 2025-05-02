@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobMatrix - Results</title>
+    <!-- Use the same styles as your main page -->
+    <style>
+        /* Copy the same CSS from your resume.html */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">JobMatrix</a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/match">Try Again</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="results-section">
+        <div class="container">
+            <h1>Matching Results</h1>
+
+            <div class="job-description">
+                <h2>Job Description</h2>
+                <p>{{ job_description }}</p>
+            </div>
+
+            <div class="results-container">
+                <h2>Top Matching Resumes</h2>
+
+                {% if results %}
+                <div class="results-grid">
+                    {% for result in results %}
+                    <div class="result-card">
+                        <h3>{{ result.filename }} <span class="score">{{ result.score }}</span></h3>
+                        <div class="content-preview">
+                            <p>{{ result.content }}</p>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="no-results">No matching resumes found.</p>
+                {% endif %}
+            </div>
+
+            <div class="action-buttons">
+                <a href="/match" class="btn">Match Another Job</a>
+                <a href="/" class="btn btn-outline">Return Home</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
