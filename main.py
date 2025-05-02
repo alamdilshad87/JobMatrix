@@ -62,7 +62,7 @@ def extract_text(file_path):
 
 @app.route('/')
 def home():
-    return render_template('resume.html')
+    return render_template('template/resume.html')
 
 
 @app.route('/match', methods=['GET', 'POST'])
@@ -146,7 +146,7 @@ def match_resumes():
             return redirect(url_for('match_resumes'))
 
     # GET request - show the matching form
-    return render_template('match.html')
+    return render_template('template/match.html')
 
 
 @app.route('/results')
